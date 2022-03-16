@@ -10,6 +10,10 @@ import com.jetbrains.kmm.shared.Calculator
 import android.widget.TextView
 import com.jetbrains.androidApp.R
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 fun greet(): String {
     return Greeting().greeting()
 }
@@ -46,5 +50,6 @@ class MainActivity : AppCompatActivity() {
         numATV.addTextChangedListener(textWatcher)
         numBTV.addTextChangedListener(textWatcher)
 
+        AppCenter.start(getApplication(), System.getenv("APP_SECRET"), Analytics.class, Crashes.class);
     }
 }

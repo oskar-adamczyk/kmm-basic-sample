@@ -50,6 +50,6 @@ class MainActivity : AppCompatActivity() {
         numATV.addTextChangedListener(textWatcher)
         numBTV.addTextChangedListener(textWatcher)
 
-        AppCenter.start(getApplication(), System.getenv("APP_SECRET"), Analytics.class, Crashes.class);
+        AppCenter.start(getApplication(), System.getenv("APP_SECRET"), Analytics::class.java, Crashes::class.java)
     }
 }

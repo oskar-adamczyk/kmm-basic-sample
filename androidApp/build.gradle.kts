@@ -25,7 +25,6 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.0")
 
-    def appCenterSdkVersion = '4.3.1'
-    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
-    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+    implementation("com.microsoft.appcenter:appcenter-analytics:4.3.1")
+    implementation("com.microsoft.appcenter:appcenter-crashes:4.3.1")
 }

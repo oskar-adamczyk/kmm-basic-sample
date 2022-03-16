@@ -28,3 +28,13 @@ jobs:
 
       - name: Build the project
         run: ./gradlew assembleRelease
+
+      - name: Upload artefact to App Center
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: wzieba/Sample-App
+          token: ${{secrets.APP_CENTER_TOKEN}}
+          group: Testers
+          file: androidApp/build/outputs/apk/release/androidApp-release-unsigned.apk
+          notifyTesters: true
+          debug: false
